@@ -1,0 +1,19 @@
+{
+  "name": "@meridian/grid-orchestrator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@meridian/domain-core": "workspace:*",
+    "@meridian/crypto-auth": "workspace:*",
+    "@meridian/event-bus": "workspace:*",
+    "@meridian/distributed-lock": "workspace:*"
+  }
+}

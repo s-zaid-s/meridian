@@ -1,0 +1,27 @@
+{
+  "name": "@meridian/control-plane-api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@meridian/domain-core": "workspace:*",
+    "@meridian/crypto-auth": "workspace:*",
+    "@meridian/event-bus": "workspace:*",
+    "@meridian/ts-storage": "workspace:*",
+    "@meridian/distributed-lock": "workspace:*",
+    "@meridian/ledger-engine": "workspace:*",
+    "@meridian/edge-fleet-simulator": "workspace:*",
+    "@meridian/telemetry-ingestor": "workspace:*",
+    "@meridian/anomaly-detector": "workspace:*",
+    "@meridian/grid-orchestrator": "workspace:*",
+    "@meridian/market-bidding-engine": "workspace:*",
+    "@meridian/settlement-service": "workspace:*"
+  }
+}

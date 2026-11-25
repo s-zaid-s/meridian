@@ -1,0 +1,48 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/domain-core"
+    },
+    {
+      "path": "../../packages/crypto-auth"
+    },
+    {
+      "path": "../../packages/event-bus"
+    },
+    {
+      "path": "../../packages/ts-storage"
+    },
+    {
+      "path": "../../packages/distributed-lock"
+    },
+    {
+      "path": "../../packages/ledger-engine"
+    },
+    {
+      "path": "../../apps/edge-fleet-simulator"
+    },
+    {
+      "path": "../../apps/telemetry-ingestor"
+    },
+    {
+      "path": "../../apps/anomaly-detector"
+    },
+    {
+      "path": "../../apps/grid-orchestrator"
+    },
+    {
+      "path": "../../apps/market-bidding-engine"
+    },
+    {
+      "path": "../../apps/settlement-service"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "meridian-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meridian: 100% Offline, Pure-TypeScript Distributed Virtual Power Plant (VPP) & Real-Time Energy Trading Monorepo",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/domain-core packages/crypto-auth packages/event-bus packages/ts-storage packages/distributed-lock packages/ledger-engine apps/edge-fleet-simulator apps/telemetry-ingestor apps/anomaly-detector apps/grid-orchestrator apps/market-bidding-engine apps/settlement-service apps/control-plane-api",
+    "clean": "node -e \"const fs=require('fs'); for (const p of ['packages','apps']) { for (const d of fs.readdirSync(p)) fs.rmSync(p+'/'+d+'/dist',{recursive:true,force:true}); }\"",
+    "start:offline": "node apps/control-plane-api/dist/bootstrap.js",
+    "test": "node --test tests/e2e.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
